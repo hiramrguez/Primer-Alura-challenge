@@ -37,9 +37,10 @@ document.getElementById('encriptar').onclick = (e) => {
   
   //encripta el texto
   function encriptar(stringEncriptada) {
-    let matrixCode = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]
-    stringEncriptada = stringEncriptada.toLowerCase()
-    for (let i = 0; i < matrixCode.length; i++) {
+    let matrixCode = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]] //Para que se cambien las letras
+    stringEncriptada = stringEncriptada.toLowerCase() // Para que todo esté en minusculas
+    
+    for (let i = 0; i < matrixCode.length; i++) { //El for es para indicar el cambio de las vocales por las reglas del reto
       if (stringEncriptada.includes(matrixCode[i][0])) {
         stringEncriptada = stringEncriptada.replaceAll(matrixCode[i][0], matrixCode[i][1])
       }
@@ -49,9 +50,10 @@ document.getElementById('encriptar').onclick = (e) => {
   
   //desencripta el texto
   function desencriptar(stringDesencriptada) {
-    let matrixCode = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]
-    stringDesencriptada = stringDesencriptada.toLowerCase()
-    for (let i = 0; i < matrixCode.length; i++) {
+    let matrixCode = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]] //Para que se cambien las letras
+    stringDesencriptada = stringDesencriptada.toLowerCase() // Para que todo esté en minusculas
+
+    for (let i = 0; i < matrixCode.length; i++) { //El for es para indicar el cambio de las vocales por las reglas del reto
       if (stringDesencriptada.includes(matrixCode[i][1])) {
         stringDesencriptada = stringDesencriptada.replaceAll(matrixCode[i][1], matrixCode[i][0])
       }
